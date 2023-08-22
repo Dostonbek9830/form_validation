@@ -25,3 +25,21 @@
 .valid-input {
     border: 1px solid green;
 }
+
+.error-last-name {
+    display: none;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 38%;
+    font-size: 18px;
+    color: red;
+}
+
+.not-entered {
+    display: none;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 38%;
+    font-size: 18px;
+    color: red;
+}
