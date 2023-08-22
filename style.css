@@ -1,0 +1,27 @@
+.error-span {
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 30%;
+    font-size: 18px;
+    color: red;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items:center;
+}
+
+.error-input {
+    border: solid red;
+}
+
+.error-input + .error-span {
+    display: block;
+}
+
+.valid-input {
+    border: 1px solid green;
+}
