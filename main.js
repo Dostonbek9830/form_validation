@@ -77,21 +77,21 @@ elForm.addEventListener("submit", function(evt){
         elEmailInput.classList.add("invalid-value")
         return
     }
-
-    if(emailValue !== emailValue.toLowerCase()) {
-        elEmailError.textContent = "Email must be lowercase"
-        elEmailError.classList.add("invalid-email")
-        elEmailInput.classList.add("invalid-value")
-        return
-    } else if(!emailValue.endsWith("@gmail.com", "@yahoo.com", "@mail.ru")) {
-        elEmailError.textContent = "Email must end with @gmail.com, @yahoo.com or @mail.ru"
-        elEmailError.classList.add("invalid-email")
-        elEmailInput.classList.add("invalid-value")
-        return
+    if (emailValue !== emailValue.toLowerCase()) {
+        elEmailError.textContent = "Email must be lowercase";
+        elEmailError.classList.add("invalid-email");
+        elEmailInput.classList.add("invalid-value");
+        return;
+    } else if (!emailValue.endsWith("@gmail.com") && !emailValue.endsWith("@yahoo.com") && !emailValue.endsWith("@mail.ru")) {
+        elEmailError.textContent = "Email must end with @gmail.com, @yahoo.com or @mail.ru";
+        elEmailError.classList.add("invalid-email");
+        elEmailInput.classList.add("invalid-value");
+        return;
     } else {
-        elEmailError.style.display = "none"
-        elEmailInput.classList.add("valid-value")
+        elEmailError.style.display = "none";
+        elEmailInput.classList.add("valid-value");
     }
+    
 
     if(!textareaValue) {
         elMessageError.textContent = "Message field cannot be empty"
@@ -104,7 +104,7 @@ elForm.addEventListener("submit", function(evt){
         elMessageError.classList.add("invalid-message")
         elTextareaInput.classList.add("invalid-value")
         return
-    } else if(textareaValue.length < 50) {
+    } else if(textareaValue.length > 50) {
         elMessageError.textContent = "Message must not exceed fifty letters"
         elMessageError.classList.add("invalid-message")
         elTextareaInput.classList.add("invalid-value")
