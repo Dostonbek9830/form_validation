@@ -1,45 +1,218 @@
-.error-span {
-    display: none;
+/* encode-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Encode Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/encode-sans-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* encode-sans-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Encode Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/encode-sans-v19-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+}
+
+body {
+    font-family: 'Encode Sans', "Arial", sans-serif ;
+    background-color: #F7F6F3;
+    text-decoration: none;
+    margin: 0;
+}
+
+.visually-hidden {
     position: absolute;
-    margin-top: 10px;
-    margin-left: 30%;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    width: 1480px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-section__header {
+    margin: 96px 0 0 0;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 71.8px;
+    color: #413529;
+}
+
+.main-section__desc {
+    margin: 25px 0 50px 0;
     font-size: 18px;
-    color: red;
+    text-align: center;
+    font-weight: 400;
+    line-height: 25px;
+    color: #413529;
+}
+
+.inner-wrapper__header {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 120%;
+    color: #000;
+}
+
+.inner-wrapper__caption {
+    margin: 0;
+    color: #5C5C5C;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.wrapper {
+    padding-bottom: 86px;
+    display: flex;
+    justify-content: space-between;
+    gap: 72px;
+}
+.address-list, .address-info__list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.address-list__item, .address-info__item {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: #202020;
+    line-height: 20px; 
+}
+
+
+.inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 10px;
+    width: 540px;
+}
+
+.address {
+    display: flex;
+    gap: 34px;
+}
+
+.social-networks__list {
+    margin: 30px 0 0 0;
+    display: flex;
+    gap: 25px;
+}
+
+.form__wrapper {
+    width: 828px;
+    padding: 25px 60px 40px 60px;
+    border-left: 1px solid #000;
+    background: #FFF;
+}
+
+.form__header {
+    position: relative;
+    margin: 0;
+    padding: 45px 0 64px 0;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    color:#413529;
 }
 
 .form {
+    position: relative;
     display: flex;
     flex-direction: column;
+    gap: 25px;
+    align-self: stretch;
+}
+
+input {
+    padding: 20px;
+    border: 0.5px solid #B6B6B6;
+    text-align: justify;
+}
+
+.message-input {
+    padding: 20px 20px 70px 20px;
+    height: 109px;
+}
+
+
+.btn {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
-    align-items:center;
+    align-self: stretch;
+    color: #FFF;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 120%; 
+    background: #94785D;
+    border: none;
 }
 
-.error-input {
-    border: solid red;
+/* Errors in js */
+
+.invalid-value {
+    border: 0.5px solid red;
 }
 
-.error-input + .error-span {
-    display: block;
+.valid-value {
+    border: 0.5px solid green;
 }
-
-.valid-input {
-    border: 1px solid green;
-}
-
-.error-last-name {
-    display: none;
+.invalid-name {
     position: absolute;
-    margin-top: 30px;
-    margin-left: 38%;
-    font-size: 18px;
+    top: -25px;
+    font-size: 11px;
+    display: block;
     color: red;
 }
 
-.not-entered {
-    display: none;
+.invalid-tel {
+    top: 60px;
     position: absolute;
-    margin-top: 30px;
-    margin-left: 38%;
-    font-size: 18px;
+    font-size: 11px;
+    display: block;
+    color: red;
+}
+
+.invalid-email {
+    top: 145px;
+    position: absolute;
+    font-size: 11px;
+    display: block;
+    color: red;
+}
+
+.invalid-message{
+    top: 225px;
+    position: absolute;
+    font-size: 11px;
+    display: block;
     color: red;
 }

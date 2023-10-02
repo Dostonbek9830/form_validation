@@ -4,19 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Form Validation</title>
+    <title>Request free consultation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form class="form">
-        <input class="first-name" type="text" placeholder="First name">
-        <input class="last-name" type="text" placeholder="Last name">
-        <button class="form-submit">Submit</button>
-    </form>
-
-    <span class="error-span">Please enter your first name and last name correctly!</span>
-    <span class="not-entered">First name and last name are required!</span>
-    <span class="error-last-name">Please do not enter number!</span>
-
+<main class="main-section">
+    <div class="container">
+        <h1 class="main-section__header">Request free consultation</h1>
+        <h2 class="visually-hidden">SEND US YOUR REQUEST</h2>
+        <p class="main-section__desc">STAY IN CONTACT</p>
+        <div class="wrapper">
+            <div class="inner-wrapper">
+                <h3 class="inner-wrapper__header">OUR OFFICE</h3>
+                    <img src="./img/globus.png" alt="globus" width="520" height="246">
+                    <p class="inner-wrapper__caption">Lorem ipsum dolor sit amet consectetur. Risus rhoncus semper nisl pulvinar integer pretium nisl egestas. Odio vulputate habitant hac amet tincidunt magna tellus tempus blandit. </p>
+                    <img src="./img/divider.png" alt="" width="520">
+                <address class="address">
+                    <ul class="address-list">
+                        <li class="address-list__item">Phone:</li>
+                        <li class="address-list__item">Email:</li>
+                        <li class="address-list__item">Address:</li>
+                    </ul>
+                    <ul class="address-info__list">
+                        <li class="address-info__item">+91 023 025 1256</li>
+                        <li class="address-info__item">example@gmail.com</li>
+                        <li class="address-info__item">Unit 8012- 8014,  Chandaka Industrial Estate, K I, I T <br>University, Patia, Bhubaneswar, Odisha 751024</li>
+                    </ul>
+                </address>
+                <ul class="social-networks__list">
+                    <li class="social-networks__item"><a href="#" class="social-network__link"><img src="./img/twitter.png" alt="twitter" width="25" height="25"></a></li>
+                    <li class="social-networks__item"><a href="#" class="social-network__link"><img src="./img/facebook.png" alt="facebook" width="25" height="25"></a></li>
+                    <li class="social-networks__item"><a href="#" class="social-network__link"><img src="./img/instagram.png" alt="instagram" width="25" height="25"></a></li>
+                    <li class="social-networks__item"><a href="#" class="social-network__link"><img src="./img/linkedin.png" alt="linkedin" width="25" height="25"></a></li>
+                </ul>
+            </div>
+            <div class="form__wrapper">
+                <h3 class="form__header">GET IN TOUCH</h3>
+                <form class="form">
+                    <span class="error-js-name"></span>
+                    <input class="name-input" type="text" placeholder="NAME">
+                    <span class="error-js-tel"></span>
+                    <input class="tel-input" type="tel" placeholder="MOBILE">
+                    <span class="error-js-email"></span>
+                    <input class="email-input" type="email" placeholder="EMAIL">
+                    <span class="error-js-message"></span>
+                    <input class="message-input" type="text" placeholder="MESSAGE">
+                    <button class="btn" type="submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
     <script src="main.js"></script>
 </body>
 </html>
